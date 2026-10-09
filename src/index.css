@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+    color: #f8fafc;
+    padding: 40px 20px;
+
+}
+
+/* main */
+
+.todo-outer{
+    max-width: 650px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.07); 
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+}
+
+/* header */
+
+.todo-outer header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.todo-outer h1{
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.todo-outer h1::after{
+    content:"";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #38bdf8;
+    border-radius: 10px;
+    margin: 10px auto 0;
+}
+
+/* input */
+
+.input-container{
+    display: flex;
+    gap: 12px;
+}
+
+.input-container input{
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #f8fafc;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid #475569;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-container input::placeholder{
+    color: #94a3b8;
+}
+
+.input-container input:focus{
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+/* buttons */
+
+button{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container button{
+    color: #0f172a;
+    background: #38bdf8;
+    min-width: 90px;
+}
+
+.input-container button:hover{
+    background: #7dd3fc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+/* task list */
+
+.tasks-container{
+    margin-top: 25px;
+}
+
+.tasks-container ul{
+    list-style: none;
+}
+
+.data-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 12px;
+    transition: border-color 0.3s, transform 0.2s;
+
+}
+
+.data-container:hover{ 
+    border-color: rgba(56, 189, 248, 0.6);
+    transform: translateY(-2px); 
+}
+
+.data-container li{ 
+    flex: 1; 
+    min-width: 0; 
+    overflow-wrap: anywhere; 
+    list-style: none; 
+    font-size: 0.95rem; 
+    color: #e2e8f0; 
+}
+
+.data-container button{ 
+    flex-shrink: 0; 
+    padding: 8px 12px; 
+    font-size: 0.8rem; 
+}
+
+/* Edit button */
+
+.data-container button:first-of-type{ 
+    color: #fef3c7; 
+    background: #92400e; 
+} 
+
+.data-container button:first-of-type:hover{ 
+    background: #b45309; 
+}
+
+/* delete button */
+
+.data-container button:last-of-type{ 
+    color: #fee2e2; 
+    background: #991b1b; 
+} 
+
+.data-container button:last-of-type:hover{ 
+    background: #dc2626; 
+}
+
+.tasks-container ul > li:only-child{ 
+    padding: 20px; 
+    text-align: center; 
+    color: #94a3b8; 
+    background: rgba(15, 23, 42, 0.5); 
+    border: 1px dashed #475569; 
+    border-radius: 12px; 
+}
+
+/* responsive */
+
+@media (max-width: 480px){ 
+    body { padding: 20px 12px; 
+    } 
+    .todo-outer{ 
+        margin: 25px auto; 
+        padding: 22px 16px; 
+    } 
+    .todo-outer h1{ 
+        font-size: 1.8rem; 
+    } 
+    .input-container{ 
+        gap: 8px; 
+    } 
+    .input-container input{ 
+        padding: 12px 10px; 
+        font-size: 0.85rem; 
+    } 
+    .input-container button{ 
+        min-width: 65px; 
+        padding: 10px; 
+    } 
+    .data-container{ 
+        gap: 7px; 
+        padding: 10px; 
+    } 
+    .data-container button{ 
+        padding: 8px; 
+        font-size: 0.75rem; 
+    } 
+    .data-container li{ 
+        font-size: 0.85rem; 
+    } 
+}
