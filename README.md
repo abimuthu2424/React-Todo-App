@@ -1,16 +1,81 @@
-# React + Vite
+# React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive Todo application built using React and CSS. It allows users to manage their daily tasks through an easy-to-use interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add new tasks
+* Edit existing tasks
+* Delete tasks
+* Prevent duplicate tasks
+* Validate empty input
+* Display success and warning notifications
+* Responsive design for different screen sizes
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* JavaScript
+* CSS
+* React Toastify
+* Vite
 
-## Expanding the ESLint configuration
+## Installation and Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/YOUR-USERNAME/react-todo-app.git
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd react-todo-app
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal to use the application.
+
+## Project Structure
+
+```text
+react-todo-app/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Todo.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+*Note: The structure above is illustrative. Adjust it to match your actual project files.*
+
+## Future Improvements
+
+* Store tasks using local storage
+* Add task completion status
+* Add task filtering and sorting
+
+## Author
+
+**Abimuthu P**
+
+* GitHub: https://github.com/abimuthu2424
+* LinkedIn: https://www.linkedin.com/in/abimuthu-p-8b611337b/
